@@ -7,8 +7,7 @@ I created an API for this project, that reads the query string containing latitu
 API: /api/closest?lat=x&lon=x
 Returns JSON Schema:
 
-
-I am using Python in this project, since I have want to learn Python some more and have been learning Python for a project at my current job.   I chose to use Flask WSGI Web application framework, since it is a lightweight framework with the ability to scale up to complex applications.  
+I decided to use Python language for this project, since I am interested in learning Python.  Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I thought it would be a good fit for performing the distance calculations needed for this project.  I chose to use Flask WSGI Web application framework, since it is a lightweight framework with the ability to scale up to complex applications.  
 
 One of the first things I did was research what formula to use to find the distance.  I looked for possible open source application to perform the calculation.  I decided to code the calculation in a separate function to call.  For the production application I would of investigated a cloud service that handle the calculation, as well as visualizations for displaying the coordinates on a Sanfrancisco map.  
 
