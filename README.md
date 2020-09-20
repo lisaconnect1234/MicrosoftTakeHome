@@ -4,6 +4,9 @@ Take home project
 Solution Design Consideration
 
 I created an API for this project, that reads the query string containing latitude and longitue.  The API returns an JSON array that contains the 5 closest food trucks.
+API: /api/closest?lat=x&lon=x
+Returns JSON Schema:
+
 
 I am using Python in this project, since I have want to learn Python some more and have been learning Python for a project at my current job.   I chose to use Flask WSGI Web application framework, since it is a lightweight framework with the ability to scale up to complex applications.  
 
