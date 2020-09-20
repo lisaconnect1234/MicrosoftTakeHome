@@ -9,7 +9,7 @@ I am using Python in this project, since I have want to learn Python some more a
 
 One of the first things I did was research what formula to use to find the distance.  I looked for possible open source application to perform the calculation.  I decided to code the calculation in a separate function to call.  For the production application I would of investigated a cloud service that handle the calculation, as well as visualizations for displaying the coordinates on a Sanfrancisco map.  
 
-Another thing I would of added in the production application is a caching mechanism for the data being read in, versus open the json file on every call.  Flask does not handle caching standalone.  I looked into importing Flask_cache, but it would not import with the version of Python I was using.  I would use Redis or another caching mechanism.
+Another thing I would of added in the production application is a caching mechanism for the data being read in, versus open the json file on every call.  Flask does not handle caching standalone.  I tried importing Flask_cache, but it would not import with the version of Python I was using.  I would use Redis or another caching mechanism.  Another performance enhancement I would do in production is split the truck data into areas, inorder to limit the amount of data the haversine algorithm is run with.  
 
 I used Visual Studio Code and the Flask debugger.  For deployment, I would create automated tests that execute in the CI/CD pipeline.  I would also use OpenAPI to document the endpoints for the project.  I would deploy in a cloud environment and create Terraform scripts to setup the environment. 
 
