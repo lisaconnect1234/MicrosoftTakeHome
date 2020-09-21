@@ -9,4 +9,7 @@ Returns JSON: Distance, Applicant, Location Description, Latitude, Longitude, lo
 Installation instructions:
 - run install -r requirements.txt to import Flask and JSON
 - you must have app.py, closest.py and haversine.py python code
+  - app.py is the flask api endpoint
+  - closest.py reads the data and performs the logic to determine the file closest trucks
+  - haversine.py has the calculation to determine the distance between 2 coordinates
 - SanFranciscoFoodTrucks.json data must be in the directory, this include the food trucks in San Franciso
