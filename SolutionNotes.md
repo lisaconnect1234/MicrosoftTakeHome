@@ -13,16 +13,18 @@ Solution Design Consideration
 
 - Following are some enhancements I would do if I had more time and for production deployment:
 
-  - Investigated a map cloud service to retrieving map data, handle the distance calculation, as well as visualizations for displaying the coordinates on a map. 
+  - Investigate performance enhancements, such as:
+  
+    -  Add a caching mechanism such as Redis for caching the data being read in, versus open the json file on every call.  Flask does not handle caching without an add on.  I tried importing Flask_cache, but it would not import with the version of Python I was using. 
+  
+    - Split the truck data into areas, inorder to limit the amount of data the haversine algorithm is run with.
+
+     - I used the python built in list to store and sort the data retrieved from the input file.  As a performance enhancement, I would look into using the array and numpy lists, since they are predefined and more efficient. 
+
+ - Investigate a map cloud service to retrieving map data, handle the distance calculation, as well as visualizations for displaying the coordinates on a map. 
 
   - Create a web UI map visualization that allows the user to search for the closest food trucks based on their current location or entered coordinates.  The UI would call this api and then display on a map the closest five locations returned.
   
-  -  Add a caching mechanism such as Redis for caching the data being read in, versus open the json file on every call.  Flask does not handle caching without an add on.  I tried importing Flask_cache, but it would not import with the version of Python I was using. 
-  
-  - Investigate performance enhancements, such as plit the truck data into areas, inorder to limit the amount of data the haversine algorithm is run with.
-
-  - I used the python built in list to store and sort the data retrieved from the input file.  As a performance enhancement, I would look into using the array and numpy lists, since they are predefined and more efficient. 
-
   - Create automated tests that execute in the CI/CD pipeline.  
   
   - Setup OpenAPI to document the endpoints for the project.  
