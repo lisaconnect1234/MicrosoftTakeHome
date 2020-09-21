@@ -3,7 +3,7 @@ Take home project
 
 Solution Design Consideration
 
-I created an API for this project, that reads the query string containing latitude and longitue.  The API returns an JSON array that contains the 5 closest food trucks.
+I created an API for this project, that reads the query string containing latitude, longitude and requested number of trucks.  The API returns an JSON array that contains the closest food trucks based on the number of trucks requested or defaults to five.
 
 - API: /api/closest?lat=x&lon=x&numTrucks  (note: numTrucks is optional, defaults to 5)
 Returns JSON: Distance, Applicant, Location Description, Latitude, Longitude, locationId 
