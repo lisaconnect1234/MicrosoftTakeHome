@@ -9,7 +9,7 @@ This API returns a JSON object of the nearest food trucks in San Francisco based
   - Output JSON array: Distance, Applicant, Location Description, Latitude, Longitude, locationId 
 
 Installation instructions:
-- run install -r requirements.txt to import Flask and JSON
+- run install -r requirements.txt to import Flask, Flask-Caching and JSON
 - you must have app.py, closest.py and haversine.py python code
   - app.py is the flask api endpoint
   - closest.py reads the data and performs the logic to determine the file closest trucks
