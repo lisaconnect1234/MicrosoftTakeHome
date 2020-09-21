@@ -11,7 +11,7 @@ Solution Design Consideration
 
 - One of the first things I did was research what formula to use to find the closest coordinates to the input latitude and longitude. I found the haversine algoritm was a recommended algorithm.  
 
-- Following are some enhancements I would do if I had more time and for production deployment:
+Following are some enhancements I would do if I had more time and for production deployment:
 
   - Investigate performance enhancements, such as:
   
@@ -19,9 +19,9 @@ Solution Design Consideration
 
      - I used the python built in list to store and sort the data retrieved from the input file.  As a performance enhancement, I would look into using the array and numpy lists, since they are predefined and more efficient. 
     
- - For production, I would refactor Flask-Caching to use Reddis because SimpleCache cache type is not thread safe.
+  - For production, I would refactor Flask-Caching to use Reddis because SimpleCache cache type is not thread safe.
 
- - Investigate a map cloud service to retrieving map data, handle the distance calculation, as well as visualizations for displaying the coordinates on a map. 
+  - Investigate a map cloud service to retrieving map data, handle the distance calculation, as well as visualizations for displaying the coordinates on a map. 
 
   - Create a web UI map visualization that allows the user to search for the closest food trucks based on their current location or entered coordinates.  The UI would call this api and then display on a map the closest five locations returned.
   
