@@ -5,17 +5,15 @@ Solution Design Consideration
 
 - I created an API for this project, that reads the query string containing latitude, longitude and requested number of closest food trucks.  The API returns an JSON array that contains the closest food trucks based on the number of trucks requested or defaults to five.
 
-- I decided to use Python language for this project, since I am interested in learning Python.  Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I thought it would be a good fit for performing the distance calculations needed for this project.  I chose to use Flask WSGI Web application framework to create the api, since it is a lightweight framework with the ability to scale up to complex applications. 
+- I decided to use Python language for this project, since I am interested in learning Python.  Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I thought it would be a good fit for performing the distance calculations needed for this project.  I chose to use Flask WSGI Web application framework to create the api, since it is a lightweight framework with the ability to scale up to complex applications.  I added Flask-Caching to cache the data file.
 
- - I used Visual Studio Code IDE and debugger for unit testing. 
+ - I used Visual Studio Code IDE and Python Flask debugger for unit testing. 
 
 - One of the first things I did was research what formula to use to find the closest coordinates to the input latitude and longitude. I found the haversine algoritm was a recommended algorithm.  
 
 - Following are some enhancements I would do if I had more time and for production deployment:
 
   - Investigate performance enhancements, such as:
-  
-    -  Add a caching mechanism such as Redis for caching the data being read in, versus open the json file on every call.  Flask does not handle caching without an add on.  I tried importing Flask_cache, but it would not import with the version of Python I was using. 
   
     - Split the truck data into areas, inorder to limit the amount of data the haversine algorithm is run with.
 
