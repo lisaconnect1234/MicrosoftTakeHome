@@ -5,14 +5,14 @@ Solution Design Consideration
 
 I created an API for this project, that reads the query string containing latitude and longitue.  The API returns an JSON array that contains the 5 closest food trucks.
 
-API: /api/closest?lat=x&lon=x&numTrucks  (note: numTrucks is optional, defaults to 5)
+- API: /api/closest?lat=x&lon=x&numTrucks  (note: numTrucks is optional, defaults to 5)
 Returns JSON: Distance, Applicant, Location Description, Latitude, Longitude, locationId 
 
 For production, I would create swagger documentation for the apis.  I would also ask the customer what documentation method they are currently using.
 
-For production, this api can be used by mobile app and web UI map visualizations that allow the user to search for the closest food trucks based on their current location or entered coorinates.  The app will call the api and then display on a map the closest five locations.
+- If I had more time, I would create a web UI map visualization that allows the user to search for the closest food trucks based on their current location or entered coordinates.  The UI would call this api and then display on a map the closest five locations returned.
 
-I decided to use Python language for this project, since I am interested in learning Python.  Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I thought it would be a good fit for performing the distance calculations needed for this project.  I chose to use Flask WSGI Web application framework to create the api, since it is a lightweight framework with the ability to scale up to complex applications. 
+- I decided to use Python language for this project, since I am interested in learning Python.  Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I thought it would be a good fit for performing the distance calculations needed for this project.  I chose to use Flask WSGI Web application framework to create the api, since it is a lightweight framework with the ability to scale up to complex applications. 
 
 One of the first things I did was research what formula to use to find the closest coordinates to the input latitude and longitude. I found the haversine algoritm was a recommended algorithm.  I looked for possible open source applications to perform the calculation.  I decided to code the calculation in a separate function to call.  Later I did find a haversine import I could use for production. For the production application I would of investigated a map cloud service to handle the calculation, retrieving map data, as well as visualizations for displaying the coordinates on a map.  
 
