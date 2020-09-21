@@ -7,7 +7,7 @@ Solution Design Consideration
 
 - I decided to use Python language for this project, since I am interested in learning Python.  Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I thought it would be a good fit for performing the distance calculations needed for this project.  I chose to use Flask WSGI Web application framework to create the api, since it is a lightweight framework with the ability to scale up to complex applications. 
 
- - I used Visual Studio Code and the Flask debugger for unit testing. 
+ - I used Visual Studio Code IDE and debugger for unit testing. 
 
 - One of the first things I did was research what formula to use to find the closest coordinates to the input latitude and longitude. I found the haversine algoritm was a recommended algorithm.  
 
