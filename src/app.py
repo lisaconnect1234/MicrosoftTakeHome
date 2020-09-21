@@ -1,7 +1,7 @@
 import json
 from flask import Flask
 from flask import request
-from multiprocessing import context
+#from multiprocessing import context
 from closest import *
 from flask_caching import Cache
 
@@ -12,16 +12,9 @@ config = {
 }
 app = Flask(__name__)
 
-#Setup cacheing for the Flask app to cache the food truck data
+#Setup Flask caching for the Flask app to cache the food truck data
 app.config.from_mapping(config)
 cache = Cache(app)
-
-def read_data():
-    #Open the file in read mode that contains the food truck data in the area and load it into a python array 
-    with open('SanFranciscoFoodTrucks.json', 'r') as j:
-        json_data = json.load(j)
-        cache.set("data",json_data)
-        return json_data
     
 @app.route("/")
 def home():
@@ -31,7 +24,7 @@ def home():
 #The API will return a JSON array with the five closest food trucks.
 @app.route("/api/closest")
 def closest():
-    #Read query string
+    #Read query string to retrieve latitude, longitude, and number of trucks to return
     if request.args:
         args = request.args
         if "lat" in args:
@@ -56,13 +49,8 @@ def closest():
         else:
             numTrucks = 5 
             
-        #Get food truck data from cache if exists, else read the food truck data and set the cache 
-        json_data = cache.get("data")
-        if (json_data == None):
-            json_data = read_data()
-             
         #Call closest.findCloset to retrieve the closest food trucks        
-        closestLocations = findClosest(float(lat),float(lon), numTrucks,json_data)
+        closestLocations = findClosest(float(lat),float(lon), numTrucks,cache)
         
         return closestLocations
     else:
