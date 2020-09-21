@@ -3,7 +3,7 @@ Take home project
 
 Solution Design Consideration
 
-- For the take home project I created an API that allows latitude, longitude and requested number of closest food trucks as input, and returns a JSON array that contains the closest food trucks based on the number of trucks requested or defaults to five.
+- For the take home project I created an API that allows latitude, longitude and requested number of closest food trucks as input, and returns a JSON array that contains the closest food trucks based on the number of trucks requested.  If number of trucks is not requested, then the value defaults to five.
 
 - I decided to use Python language for this project, because I thought it would be a good fit for performing the distance calculations needed for this project.   Some of the code at my curent job is in Python and the language efficiently peforms calculations.  Also, I am interested in learning Python.  I chose to use Flask WSGI Web application framework to create the api, since it is a lightweight framework with the ability to scale up to complex applications.  I added Flask-Caching to cache the data file.
 
