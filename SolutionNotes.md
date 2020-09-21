@@ -21,7 +21,7 @@ Following are some enhancements I would do if I had more time and for production
     
   - For production, I would refactor Flask-Caching to use Reddis because SimpleCache cache type is not thread safe.
 
-  - Investigate a map cloud service to retrieving map data, handle the distance calculation, as well as visualizations for displaying the coordinates on a map. 
+  - Investigate a map cloud service to retrieving map data, handle the distance calculation, as well as visualizations for displaying the coordinates on a map. When the data layer becomes more complex, I would create a DAO and entity objects to handle the data layer. 
 
   - Create a web UI map visualization that allows the user to search for the closest food trucks based on their current location or entered coordinates.  The UI would call this api and then display on a map the closest five locations returned.
   
