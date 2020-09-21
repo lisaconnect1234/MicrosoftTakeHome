@@ -6,7 +6,7 @@ This API returns a JSON object of the nearest food trucks in San Francisco based
     - lat = latitude
     - lon = longitude
     - numTrucks - number of clostes trucks to return (defaults to 5 if not present).
-  - Output JSON: Distance, Applicant, Location Description, Latitude, Longitude, locationId 
+  - Output JSON array: Distance, Applicant, Location Description, Latitude, Longitude, locationId 
 
 Installation instructions:
 - run install -r requirements.txt to import Flask and JSON
