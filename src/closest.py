@@ -26,7 +26,7 @@ def findClosest(inLat,inLon,numTrucks,cache):
         dist = haversine(inLat,inLon, i["Latitude"],i["Longitude"])
         distList.append([dist,i["Applicant"],i["LocationDescription"],i["Latitude"],i["Longitude"],i["locationid"]])
     
-    #Set the distance as the key to store on
+    #Set the distance as the key to sort on
     def sortDist(val): 
         return val[0]  
 
