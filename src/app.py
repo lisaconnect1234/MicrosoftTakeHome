@@ -31,21 +31,21 @@ def closest():
             try:
                 lat = float(args["lat"])
             except ValueError:
-                return "Latitude is not numeric.",200
+                return "Latitude is not numeric.",500
         else:
-            return "Latitude does not exist in input parameter.",200
+            return "Latitude does not exist in input parameter.",500
         if "lon" in args:
             try:
                 lon = float(args["lon"])
             except ValueError:
-                return "Longitude is not numeric.",200
+                return "Longitude is not numeric.",500
         else:
-            return "Longitude does not exist in input parameter.",200
+            return "Longitude does not exist in input parameter.",500
         if "numTrucks" in args:
                 try:
                     numTrucks = int(args["numTrucks"])
                 except ValueError:
-                    return "Number of Trucks is not numeric.",200
+                    return "Number of Trucks is not numeric.",500
         else:
             numTrucks = 5 
             
@@ -54,6 +54,6 @@ def closest():
         
         return closestLocations
     else:
-        return "No Latitude and Longitude received",200
+        return "No Latitude and Longitude received",500
 
  
