@@ -1,7 +1,7 @@
 # MicrosoftTakeHome
 This repository contains an API that returns a JSON object of the nearest food trucks in San Francisco based on the input latitude and longitude. 
 
-##API
+API
 base: "/${dev}/api" 
 paths:
     /closest
